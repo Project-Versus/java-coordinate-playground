@@ -13,7 +13,9 @@ public abstract class Car {
     /**
      * 여행하려는 거리
      */
-    abstract double getTripDistance();
+     double getTripDistance() {
+         return this.tripDistance;
+     }
 
     /**
      * 차종의 이름

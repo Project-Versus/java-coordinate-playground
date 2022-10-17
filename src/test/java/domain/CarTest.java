@@ -41,10 +41,11 @@ class CarTest {
         assertThat(sonata.getName()).isEqualTo(Sonata.class.getSimpleName());
     }
 
-    @CsvSource({"200, 100, 500"})
+    @CsvSource(value = {"200/ 100", "100/ 500"}, delimiterString = "/")
     @DisplayName("자동차 여행 거리")
     @ParameterizedTest
-    void 자동차_객체_여행_거리_확인(double tripDistance) {
+    void 자동차_객체_여행_거리_확인(double tripDistance, double test) {
+        System.out.println(test);
         Car sonata = new Sonata(tripDistance);
         Car k5 = new K5(tripDistance);
         Car avante = new Avante(tripDistance);

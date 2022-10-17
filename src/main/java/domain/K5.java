@@ -15,7 +15,7 @@ public class K5 extends Car {
 
     @Override
     double getTripDistance() {
-        return this.tripDistance;
+        return super.getTripDistance();
     }
 
     @Override
